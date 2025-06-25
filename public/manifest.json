@@ -4,8 +4,8 @@
   "description": "A Bitcoin-native learn-to-earn PWA for sovereign skill-building",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#f97316",
+  "background_color": "#103221",
+  "theme_color": "#f39e1b",
   "orientation": "portrait-primary",
   "icons": [
     {
@@ -23,5 +23,21 @@
   ],
   "categories": ["education", "finance", "productivity"],
   "lang": "en",
-  "dir": "ltr"
+  "dir": "ltr",
+  "shortcuts": [
+    {
+      "name": "Missions",
+      "short_name": "Missions",
+      "description": "View available learning missions",
+      "url": "/missions",
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Tribes",
+      "short_name": "Tribes",
+      "description": "Join learning tribes",
+      "url": "/tribes",
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192" }]
+    }
+  ]
 }

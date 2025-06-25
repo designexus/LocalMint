@@ -1,15 +1,17 @@
 import { Hero } from '@/components/Hero'
-import { Features } from '@/components/Features'
-import { HowItWorks } from '@/components/HowItWorks'
-import { Stats } from '@/components/Stats'
+import { WalletBar } from '@/components/WalletBar'
+import { MissionFeed } from '@/components/MissionFeed'
+import { TribeBoard } from '@/components/TribeBoard'
+import { TruthCastPlayer } from '@/components/TruthCastPlayer'
 
 export default function HomePage() {
   return (
     <main className="min-h-screen">
+      <WalletBar />
       <Hero />
-      <Stats />
-      <Features />
-      <HowItWorks />
+      <MissionFeed />
+      <TribeBoard />
+      <TruthCastPlayer />
     </main>
   )
 }

@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 @layer base {
   html {
@@ -11,37 +11,41 @@
   }
   
   body {
-    @apply antialiased;
+    @apply antialiased bg-forest-900 text-white;
   }
   
   * {
-    @apply border-dark-700;
+    @apply border-forest-700;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-bitcoin-500 hover:bg-bitcoin-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-bitcoin-500 focus:ring-offset-2 focus:ring-offset-dark-900;
+    @apply bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
   }
   
   .btn-secondary {
-    @apply bg-dark-700 hover:bg-dark-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-dark-500 focus:ring-offset-2 focus:ring-offset-dark-900;
+    @apply bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105;
   }
   
   .card {
-    @apply bg-dark-800 border border-dark-700 rounded-xl p-6 shadow-lg;
+    @apply bg-forest-800 border border-forest-700 rounded-xl p-6 shadow-lg backdrop-blur-sm;
   }
   
-  .input {
-    @apply bg-dark-800 border border-dark-600 text-white placeholder-dark-400 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-bitcoin-500 focus:border-transparent;
+  .card-hover {
+    @apply hover:bg-forest-700 hover:border-orange-500 transition-all duration-300 transform hover:scale-105;
   }
   
   .gradient-text {
-    @apply bg-gradient-to-r from-bitcoin-400 to-lightning-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-orange-400 to-green-400 bg-clip-text text-transparent;
   }
   
-  .lightning-glow {
-    @apply shadow-lg shadow-lightning-500/20;
+  .glow-orange {
+    @apply shadow-lg shadow-orange-500/20;
+  }
+  
+  .glow-green {
+    @apply shadow-lg shadow-green-500/20;
   }
 }
 
@@ -66,15 +70,15 @@
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-dark-800;
+  @apply bg-forest-800;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-dark-600 rounded-full;
+  @apply bg-orange-500 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-dark-500;
+  @apply bg-orange-400;
 }
 
 /* Loading animations */
@@ -88,7 +92,12 @@
 }
 
 .shimmer {
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(243, 158, 27, 0.1), transparent);
   background-size: 200px 100%;
   animation: shimmer 1.5s infinite;
+}
+
+/* Lotus background pattern */
+.lotus-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23103221' fill-opacity='0.1'%3E%3Cpath d='M30 30c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm0 0c0 11.046 8.954 20 20 20s20-8.954 20-20-8.954-20-20-20-20 8.954-20 20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
