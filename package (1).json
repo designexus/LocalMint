@@ -1,0 +1,25 @@
+{
+  "name": "localmint",
+  "version": "1.0.0",
+  "description": "A Bitcoin-native sovereign learning PWA powered by Bolt AI and Lightning.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "keywords": ["bitcoin", "lightning", "pwa", "learning", "sovereign", "boltai"],
+  "author": "Designexus",
+  "license": "MIT",
+  "dependencies": {
+    "next": "14.1.0",
+    "react": "18.3.0",
+    "react-dom": "18.3.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.26",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.4.5"
+  }
+}
